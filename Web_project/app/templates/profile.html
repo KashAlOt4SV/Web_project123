@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<body background='/static/img/Preview.jpg'>
+<div class="alert alert-warning" role="alert">
+<p><a class="navbar-brand" style="float:left">
+Ваш никнейм:</a>  <a class="navbar-brand">{{ current_user.name }}</a></p>
+
+
+<p><a class="navbar-brand" style="float:left">
+Ваша почта:</a>  <a class="navbar-brand">{{ current_user.email }}</a></p>
+
+<p><a class="navbar-brand" style="float:left">
+О вас:</a>  <a class="navbar-brand">{{ current_user.about }}</a></p>
+
+<p><a class="navbar-brand" style="float:left">
+Вы с нами с:</a>  <a class="navbar-brand">{{ current_user.created_date }}</a></p>
+
+<div><a class="btn btn-primary " href="/logout">Выйти из аккаунта</a></div>
+</div>
+{% endblock %}
